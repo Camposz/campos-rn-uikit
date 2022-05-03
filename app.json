@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "campos-rn-uikit",
+    "slug": "campos-rn-uikit",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "campos-rn-uikit"
+}
