@@ -6,23 +6,8 @@ import { useFonts } from 'expo-font';
 import { Btn, MenuItem, SearchField, TextField } from './src/components/atoms';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
-//SSE
-import RNEventSource from 'react-native-event-source';
-
 const App = () => {
     const [value, setValue] = useState<string>('');
-
-    const url = 'http://192.168.1.153:9090/';
-    const eventSource = new RNEventSource(url);
-
-    useEffect(() => {
-        eventSource.addEventListener('message', (ev) => {
-            console.log(ev.data);
-        });
-        eventSource.addEventListener('error', (ev) => {
-            console.log(ev);
-        });
-    }, []);
 
     const [loaded] = useFonts({
         WorkSans: require('./src/assets/fonts/WorkSans.ttf')
