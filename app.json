@@ -1,9 +1,24 @@
 {
-    "expo": {
-        "name": "campos-rn-uikit",
-        "slug": "campos-rn-uikit",
-        "version": "1.0.0",
-        "assetBundlePatterns": ["**/*"]
+  "expo": {
+    "name": "TechPratico",
+    "slug": "techpratico",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "name": "campos-rn-uikit"
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.techpark.techpratico",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFF"
+      }
+    }
+  },
+  "name": "TechPratico"
 }
