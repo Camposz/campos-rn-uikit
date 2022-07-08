@@ -1,3 +1,3 @@
 import PressableIcon from './PressableIcon';
 
-export { PressableIcon };
+export default PressableIcon ;

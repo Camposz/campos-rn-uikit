@@ -1,6 +1,7 @@
 import React, { Dispatch, FunctionComponent, SetStateAction } from 'react';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
-import PressableIcon from '../pressableIcon/PressableIcon';
+import PressableIcon from '../pressableIcon';
 
 interface IProps {
     text: string;
@@ -43,7 +44,8 @@ const IconGroup = styled.View`
 
 const TextSearch = styled.TextInput`
     margin-left: 10px;
-    font-size: 18px;
+    font-size: ${RFPercentage(2.5).toString() + 'px'};
     text-align: left;
     flex: 1;
+    font-family: 'WorkSans';
 `;

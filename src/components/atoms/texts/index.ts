@@ -1,3 +1,3 @@
-import { Title } from './Title';
+import { Texto } from './Texto';
 
-export { Title };
+export { Texto };

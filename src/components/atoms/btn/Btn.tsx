@@ -1,29 +1,30 @@
 import React from 'react';
-import { Title } from '../texts/Title';
+import { Texto, TextoProps } from '../texts/Texto';
 import { BtnView } from './styles';
-import { TittleProps } from '../texts/Title';
 import { ActivityIndicator, StyleProp, ViewStyle } from 'react-native';
-import { PressableIcon } from '../pressableIcon';
+import { RFPercentage } from 'react-native-responsive-fontsize';
+import SimpleIcon from '../simpleIcon';
 
 interface IProps {
     text: string;
-    textColor?: TittleProps['color'];
-    textWeigth?: TittleProps['weight'];
+    textColor?: TextoProps['color'];
+    textWeigth?: TextoProps['weight'];
+    type?: TextoProps['type'];
     background?: string;
     style?: StyleProp<ViewStyle>;
     icon?: string;
     carregando?: boolean;
 }
 
-const Btn: React.FC<IProps> = ({ background, text, textColor, textWeigth, style, icon, carregando }) => {
+const Btn: React.FC<IProps> = ({ background, text, textColor, textWeigth, style, icon, carregando, type }) => {
     return (
         <BtnView background={background} style={[style, { flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }]}>
             {!carregando ? (
                 <>
-                    {icon ? <PressableIcon icon={icon} color="white" size={25} /> : null}
-                    <Title color={textColor ? textColor : 'white'} weight={textWeigth}>
+                    {icon && <SimpleIcon style={{ marginRight: 10 }} icon={icon} color="white" size={RFPercentage(2.5)} />}
+                    <Texto color={textColor ? textColor : 'white'} type={type}>
                         {text}
-                    </Title>
+                    </Texto>
                 </>
             ) : (
                 <ActivityIndicator animating color={textColor ? textColor : 'white'} size={'large'} />
